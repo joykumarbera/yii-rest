@@ -1,0 +1,3421 @@
+2020-09-18 10:14:40 [127.0.0.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/Connection.php:710
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/Connection.php(710): PDO->__construct()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#3 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#4 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#5 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare()
+#6 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal()
+#7 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns()
+#9 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/Schema.php(757): yii\db\mysql\Schema->loadTableSchema()
+#10 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata()
+#11 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema()
+#12 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#13 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames()
+#14 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition()
+#15 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition()
+#16 /home/joy/Desktop/yii-advanced/common/models/User.php(85): yii\db\BaseActiveRecord::findOne()
+#17 /home/joy/Desktop/yii-advanced/common/models/LoginForm.php(73): common\models\User::findByUsername()
+#18 /home/joy/Desktop/yii-advanced/common/models/LoginForm.php(44): common\models\LoginForm->getUser()
+#19 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/validators/InlineValidator.php(84): common\models\LoginForm->validatePassword()
+#20 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute()
+#21 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Model.php(367): yii\validators\Validator->validateAttributes()
+#22 /home/joy/Desktop/yii-advanced/common/models/LoginForm.php(58): yii\base\Model->validate()
+#23 /home/joy/Desktop/yii-advanced/rest/versions/v1/controllers/UserController.php(17): common\models\LoginForm->login()
+#24 [internal function]: rest\versions\v1\controllers\UserController->actionLogin()
+#25 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#26 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#27 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#28 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#29 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#30 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/Connection.php:642
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#3 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare()
+#4 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal()
+#5 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns()
+#7 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/Schema.php(757): yii\db\mysql\Schema->loadTableSchema()
+#8 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata()
+#9 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema()
+#10 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#11 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames()
+#12 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition()
+#13 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition()
+#14 /home/joy/Desktop/yii-advanced/common/models/User.php(85): yii\db\BaseActiveRecord::findOne()
+#15 /home/joy/Desktop/yii-advanced/common/models/LoginForm.php(73): common\models\User::findByUsername()
+#16 /home/joy/Desktop/yii-advanced/common/models/LoginForm.php(44): common\models\LoginForm->getUser()
+#17 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/validators/InlineValidator.php(84): common\models\LoginForm->validatePassword()
+#18 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute()
+#19 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Model.php(367): yii\validators\Validator->validateAttributes()
+#20 /home/joy/Desktop/yii-advanced/common/models/LoginForm.php(58): yii\base\Model->validate()
+#21 /home/joy/Desktop/yii-advanced/rest/versions/v1/controllers/UserController.php(17): common\models\LoginForm->login()
+#22 [internal function]: rest\versions\v1\controllers\UserController->actionLogin()
+#23 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#24 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#25 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#26 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#27 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#28 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#29 {main}
+Additional Information:
+
+2020-09-18 10:14:40 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'username' => 'demo'
+    'password' => 'demo'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '56972'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/user/login'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/user/login'
+    'PHP_SELF' => '/index.php/v1/user/login'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '9bad0191-5906-4384-b197-af6d82266227'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------346593640303324256464834'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------346593640303324256464834'
+    'CONTENT_LENGTH' => '278'
+    'HTTP_CONTENT_LENGTH' => '278'
+    'REQUEST_TIME_FLOAT' => 1600424080.4763
+    'REQUEST_TIME' => 1600424080
+]
+2020-09-18 11:05:35 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/ in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:05:35 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'username' => 'demo'
+    'password' => 'demo'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57832'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post'
+    'PHP_SELF' => '/index.php/v1/post'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '56434b8d-b41a-4fac-a7e1-7d8921578895'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------975787116295082200810415'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------975787116295082200810415'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '278'
+    'HTTP_CONTENT_LENGTH' => '278'
+    'REQUEST_TIME_FLOAT' => 1600427135.2747
+    'REQUEST_TIME' => 1600427135
+]
+2020-09-18 11:05:44 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/create in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:05:44 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'username' => 'demo'
+    'password' => 'demo'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57836'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'e6323be4-a65b-4f35-b6a7-9ecefcd2d0ab'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------314048707565035201854308'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------314048707565035201854308'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '278'
+    'HTTP_CONTENT_LENGTH' => '278'
+    'REQUEST_TIME_FLOAT' => 1600427144.4475
+    'REQUEST_TIME' => 1600427144
+]
+2020-09-18 11:06:13 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "v1/posts". in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#2 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:06:13 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'username' => 'demo'
+    'password' => 'demo'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57840'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '57a62bba-40e1-4fe6-aab4-46083024a8ac'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------297290626672318826429109'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------297290626672318826429109'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '278'
+    'HTTP_CONTENT_LENGTH' => '278'
+    'REQUEST_TIME_FLOAT' => 1600427173.4719
+    'REQUEST_TIME' => 1600427173
+]
+2020-09-18 11:06:14 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "v1/posts". in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#2 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:06:14 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'username' => 'demo'
+    'password' => 'demo'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57844'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'acb5035a-eeec-4ce6-bcb9-c595bd061423'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------995331251748740133755388'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------995331251748740133755388'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '278'
+    'HTTP_CONTENT_LENGTH' => '278'
+    'REQUEST_TIME_FLOAT' => 1600427174.2985
+    'REQUEST_TIME' => 1600427174
+]
+2020-09-18 11:06:14 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "v1/posts". in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#2 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:06:14 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'username' => 'demo'
+    'password' => 'demo'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57848'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '3faed052-bfca-46f3-ba85-7897856bdb72'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------011976692909879623012066'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------011976692909879623012066'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '278'
+    'HTTP_CONTENT_LENGTH' => '278'
+    'REQUEST_TIME_FLOAT' => 1600427174.93
+    'REQUEST_TIME' => 1600427174
+]
+2020-09-18 11:06:17 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/ in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:06:17 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'username' => 'demo'
+    'password' => 'demo'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57854'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post'
+    'PHP_SELF' => '/index.php/v1/post'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'a614703b-b207-4588-bbad-9b65423fa122'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------857020160315619636075578'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------857020160315619636075578'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '278'
+    'HTTP_CONTENT_LENGTH' => '278'
+    'REQUEST_TIME_FLOAT' => 1600427177.01
+    'REQUEST_TIME' => 1600427177
+]
+2020-09-18 11:06:18 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/ in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:06:18 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'username' => 'demo'
+    'password' => 'demo'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57858'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post'
+    'PHP_SELF' => '/index.php/v1/post'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'f0747b68-6a5a-4bc5-a593-ec82d4fbbd40'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------866022045615028482704489'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------866022045615028482704489'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '278'
+    'HTTP_CONTENT_LENGTH' => '278'
+    'REQUEST_TIME_FLOAT' => 1600427178.0291
+    'REQUEST_TIME' => 1600427178
+]
+2020-09-18 11:06:18 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/ in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:06:18 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'username' => 'demo'
+    'password' => 'demo'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57862'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post'
+    'PHP_SELF' => '/index.php/v1/post'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '8ad320ee-c04e-4ff0-a37c-489c1ad28956'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------748726028861944443988418'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------748726028861944443988418'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '278'
+    'HTTP_CONTENT_LENGTH' => '278'
+    'REQUEST_TIME_FLOAT' => 1600427178.6548
+    'REQUEST_TIME' => 1600427178
+]
+2020-09-18 11:06:19 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/ in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:06:19 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'username' => 'demo'
+    'password' => 'demo'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57866'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post'
+    'PHP_SELF' => '/index.php/v1/post'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'f71f559e-2b46-4caf-a5e6-828bf79deace'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------501760090687353549874760'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------501760090687353549874760'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '278'
+    'HTTP_CONTENT_LENGTH' => '278'
+    'REQUEST_TIME_FLOAT' => 1600427179.2954
+    'REQUEST_TIME' => 1600427179
+]
+2020-09-18 11:06:22 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/ in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:06:22 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57870'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post'
+    'PHP_SELF' => '/index.php/v1/post'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '8ba094db-dd10-491a-bc49-a193d2adea33'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------492450716208535557940933'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------492450716208535557940933'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '278'
+    'HTTP_CONTENT_LENGTH' => '278'
+    'REQUEST_TIME_FLOAT' => 1600427182.891
+    'REQUEST_TIME' => 1600427182
+]
+2020-09-18 11:07:18 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/ in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:07:18 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57876'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post'
+    'PHP_SELF' => '/index.php/v1/post'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '17d035db-08bc-4488-a9f2-1781aad80218'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------757395562077077082057272'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------757395562077077082057272'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '278'
+    'HTTP_CONTENT_LENGTH' => '278'
+    'REQUEST_TIME_FLOAT' => 1600427238.8407
+    'REQUEST_TIME' => 1600427238
+]
+2020-09-18 11:07:32 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/user/ in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:07:32 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57880'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/user'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/user'
+    'PHP_SELF' => '/index.php/v1/user'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'dca463b4-5419-49a4-9dbb-688cb77cc9bf'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------870560345041081555325616'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------870560345041081555325616'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '278'
+    'HTTP_CONTENT_LENGTH' => '278'
+    'REQUEST_TIME_FLOAT' => 1600427252.6289
+    'REQUEST_TIME' => 1600427252
+]
+2020-09-18 11:07:46 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/index in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:07:46 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57888'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post/index'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post/index'
+    'PHP_SELF' => '/index.php/v1/post/index'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '4b04f303-62d8-4b27-880f-3aa8188c603e'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------963256464445775083233663'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------963256464445775083233663'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '278'
+    'HTTP_CONTENT_LENGTH' => '278'
+    'REQUEST_TIME_FLOAT' => 1600427266.0703
+    'REQUEST_TIME' => 1600427266
+]
+2020-09-18 11:07:50 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/1 in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:07:50 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57892'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post/1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post/1'
+    'PHP_SELF' => '/index.php/v1/post/1'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '1e693546-ef93-47c7-beb3-5e858ee28630'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------899151687455745329205250'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------899151687455745329205250'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '278'
+    'HTTP_CONTENT_LENGTH' => '278'
+    'REQUEST_TIME_FLOAT' => 1600427270.6169
+    'REQUEST_TIME' => 1600427270
+]
+2020-09-18 11:09:17 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/ in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:09:17 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57912'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post'
+    'PHP_SELF' => '/index.php/v1/post'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'fa51dff1-cda3-4857-aa82-d2a3540cef5a'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------365331819765093857054635'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------365331819765093857054635'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '278'
+    'HTTP_CONTENT_LENGTH' => '278'
+    'REQUEST_TIME_FLOAT' => 1600427357.8997
+    'REQUEST_TIME' => 1600427357
+]
+2020-09-18 11:12:19 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/ in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:12:19 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57974'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post'
+    'PHP_SELF' => '/index.php/v1/post'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '2f679f40-0ccd-4271-85b5-33f5dbbf708c'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------016923241331721965772927'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------016923241331721965772927'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '278'
+    'HTTP_CONTENT_LENGTH' => '278'
+    'REQUEST_TIME_FLOAT' => 1600427539.6164
+    'REQUEST_TIME' => 1600427539
+]
+2020-09-18 11:12:20 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/ in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:12:20 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57978'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post'
+    'PHP_SELF' => '/index.php/v1/post'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '2b9a2143-ef56-4647-aac8-536e6009a0c2'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------854717592965682064084845'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------854717592965682064084845'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '278'
+    'HTTP_CONTENT_LENGTH' => '278'
+    'REQUEST_TIME_FLOAT' => 1600427540.531
+    'REQUEST_TIME' => 1600427540
+]
+2020-09-18 11:12:21 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/ in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:12:21 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57982'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post'
+    'PHP_SELF' => '/index.php/v1/post'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'c3f3fd18-50f0-44d4-83f8-0667dfcb86f3'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------527790476008826538403790'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------527790476008826538403790'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '278'
+    'HTTP_CONTENT_LENGTH' => '278'
+    'REQUEST_TIME_FLOAT' => 1600427541.2455
+    'REQUEST_TIME' => 1600427541
+]
+2020-09-18 11:12:22 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/ in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:12:22 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57986'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post'
+    'PHP_SELF' => '/index.php/v1/post'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'ba5b9b5d-ac58-45a3-b546-3d61983cd189'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------665696358695099855891651'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------665696358695099855891651'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '278'
+    'HTTP_CONTENT_LENGTH' => '278'
+    'REQUEST_TIME_FLOAT' => 1600427542.1033
+    'REQUEST_TIME' => 1600427542
+]
+2020-09-18 11:12:23 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/ in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:12:23 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57990'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post'
+    'PHP_SELF' => '/index.php/v1/post'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '7f486fda-7c6b-48ba-ad7d-56c3d29c4e95'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------367596701348523865299135'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------367596701348523865299135'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '278'
+    'HTTP_CONTENT_LENGTH' => '278'
+    'REQUEST_TIME_FLOAT' => 1600427543.0237
+    'REQUEST_TIME' => 1600427543
+]
+2020-09-18 11:12:30 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/ in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:12:30 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57994'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post'
+    'PHP_SELF' => '/index.php/v1/post'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'f697d462-cdf7-468c-a29b-8689cfc15a0f'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'REQUEST_TIME_FLOAT' => 1600427550.4754
+    'REQUEST_TIME' => 1600427550
+]
+2020-09-18 11:12:33 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/ in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:12:33 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57998'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post'
+    'PHP_SELF' => '/index.php/v1/post'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '4b0f8574-ba80-4946-bce2-fcb9df8ec180'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'REQUEST_TIME_FLOAT' => 1600427553.5712
+    'REQUEST_TIME' => 1600427553
+]
+2020-09-18 11:21:35 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/create in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:21:35 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'title' => 'dev'
+    'content_' => 'test content'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58522'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '2fb50dc9-4a5d-4247-8218-bc4298ad108c'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------518847267982989900204740'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------518847267982989900204740'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600428095.35
+    'REQUEST_TIME' => 1600428095
+]
+2020-09-18 11:21:36 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/create in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:21:36 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'title' => 'dev'
+    'content_' => 'test content'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58526'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'ccfb4bbe-32e2-4712-ab19-90d163c40181'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------917567649626032501715433'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------917567649626032501715433'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600428096.5808
+    'REQUEST_TIME' => 1600428096
+]
+2020-09-18 11:22:14 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/create in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:22:14 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'title' => 'dev'
+    'content_' => 'test content'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58532'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '80b6ffeb-34e1-45f6-8120-e2c5166339ca'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------993216854996529120938995'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------993216854996529120938995'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600428134.6169
+    'REQUEST_TIME' => 1600428134
+]
+2020-09-18 11:22:15 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/create in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:22:15 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'title' => 'dev'
+    'content_' => 'test content'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58536'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '0730d94b-94df-48e7-a33c-5033862e5581'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------008444324625217204592999'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------008444324625217204592999'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600428135.5636
+    'REQUEST_TIME' => 1600428135
+]
+2020-09-18 11:22:16 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/create in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:22:16 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'title' => 'dev'
+    'content_' => 'test content'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58542'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'bd1d56c4-0ac5-4b2b-8ec5-b40f4caa8f52'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------202062541712202658131431'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------202062541712202658131431'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600428136.8396
+    'REQUEST_TIME' => 1600428136
+]
+2020-09-18 11:22:18 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/create in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:22:18 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'title' => 'dev'
+    'content_' => 'test content'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58546'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '67786c33-07c1-40ff-bb5d-e667f145e314'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------485780224779969897058078'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------485780224779969897058078'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600428138.1625
+    'REQUEST_TIME' => 1600428138
+]
+2020-09-18 11:22:18 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/create in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:22:18 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'title' => 'dev'
+    'content_' => 'test content'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58550'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '99df39f6-2562-4d7a-aaee-cc95799eeea9'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------056251511210784141506456'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------056251511210784141506456'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600428138.6967
+    'REQUEST_TIME' => 1600428138
+]
+2020-09-18 11:22:37 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/create in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:22:37 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'title' => 'dev'
+    'content_' => 'test content'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58554'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'b8106cfe-784a-4f50-b338-465125078736'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------233295858748904306520078'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------233295858748904306520078'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600428157.3659
+    'REQUEST_TIME' => 1600428157
+]
+2020-09-18 11:23:46 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/create in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:23:46 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'title' => 'dev'
+    'content_' => 'test content'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58564'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '8a572442-ceb9-4ef2-bde9-e3cece3d6b85'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------872724483582393185820480'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------872724483582393185820480'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600428226.955
+    'REQUEST_TIME' => 1600428226
+]
+2020-09-18 11:23:47 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/create in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:23:47 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'title' => 'dev'
+    'content_' => 'test content'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58568'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'b9481fde-67f7-4341-97ad-e0f96db09be6'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------786022590560553264769668'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------786022590560553264769668'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600428227.8272
+    'REQUEST_TIME' => 1600428227
+]
+2020-09-18 11:27:02 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/create in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:27:02 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'title' => 'dev'
+    'content_' => 'test content'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58598'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '7cffefcb-8ad3-44fe-8060-627160f11957'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------747614983031647838793386'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------747614983031647838793386'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600428422.8171
+    'REQUEST_TIME' => 1600428422
+]
+2020-09-18 11:27:57 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/create in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:27:57 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'title' => 'dev'
+    'content_' => 'test content'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58610'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'bfb5d415-7712-47a6-917c-f9ffb447beca'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------743253848202671452376081'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------743253848202671452376081'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600428477.4485
+    'REQUEST_TIME' => 1600428477
+]
+2020-09-18 11:27:58 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/create in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:27:58 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'title' => 'dev'
+    'content_' => 'test content'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58614'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '5ed00fd3-724c-412b-bd61-1fbaeddf5244'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------981904466608764251028632'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------981904466608764251028632'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600428478.4618
+    'REQUEST_TIME' => 1600428478
+]
+2020-09-18 11:27:59 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/create in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:27:59 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'title' => 'dev'
+    'content_' => 'test content'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58618'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'f5ceb315-4f25-4644-9839-679bfd4661fd'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------708676942419892037963838'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------708676942419892037963838'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600428479.0471
+    'REQUEST_TIME' => 1600428479
+]
+2020-09-18 11:27:59 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/create in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 11:27:59 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'title' => 'dev'
+    'content_' => 'test content'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58622'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '9f3efeb7-9744-4220-8eaf-ee0135543d3c'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------356134677536700610037192'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------356134677536700610037192'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600428479.5868
+    'REQUEST_TIME' => 1600428479
+]
+2020-09-18 11:31:23 [127.0.0.1][-][-][error][Error] Error: Class 'rest\versions\v1\models\ActiveRecord' not found in /home/joy/Desktop/yii-advanced/rest/versions/v1/models/Post.php:26
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Component.php(733): rest\versions\v1\models\Post->behaviors()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Component.php(603): yii\base\Component->ensureBehaviors()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(933): yii\base\Component->trigger()
+#3 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\BaseActiveRecord->init()
+#4 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/rest/CreateAction.php(48): yii\base\BaseObject->__construct()
+#5 [internal function]: yii\rest\CreateAction->run()
+#6 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array()
+#7 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\Action->runWithParams()
+#8 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#9 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#10 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#11 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#12 {main}
+2020-09-18 11:31:23 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'title' => 'dev'
+    'content_' => 'test content'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58694'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '1e361227-dd8f-47e3-8530-57cae41c480a'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------276128962056067775376291'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------276128962056067775376291'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600428683.1867
+    'REQUEST_TIME' => 1600428683
+]
+2020-09-18 11:34:57 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/auth/AuthMethod.php:93
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction()
+#2 [internal function]: yii\base\ActionFilter->beforeFilter()
+#3 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Component.php(627): call_user_func()
+#4 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(299): yii\base\Component->trigger()
+#5 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Controller.php(200): yii\base\Controller->beforeAction()
+#6 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(178): yii\web\Controller->beforeAction()
+#7 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#8 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#9 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#10 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#11 {main}
+2020-09-18 11:34:57 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58776'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts/1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts/1'
+    'PHP_SELF' => '/index.php/v1/posts/1'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'ab135618-2e9b-4f1e-99bb-6e622f37048c'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------311793914958475091079874'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------311793914958475091079874'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600428897.873
+    'REQUEST_TIME' => 1600428897
+]
+2020-09-18 11:35:06 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/auth/AuthMethod.php:93
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction()
+#2 [internal function]: yii\base\ActionFilter->beforeFilter()
+#3 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Component.php(627): call_user_func()
+#4 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(299): yii\base\Component->trigger()
+#5 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Controller.php(200): yii\base\Controller->beforeAction()
+#6 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(178): yii\web\Controller->beforeAction()
+#7 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#8 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#9 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#10 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#11 {main}
+2020-09-18 11:35:06 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58782'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts/1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts/1'
+    'PHP_SELF' => '/index.php/v1/posts/1'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '38479b78-91e4-4342-a43e-6d46aa997c71'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------090661775250458414009828'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------090661775250458414009828'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600428906.4106
+    'REQUEST_TIME' => 1600428906
+]
+2020-09-18 11:35:18 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/auth/AuthMethod.php:93
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction()
+#2 [internal function]: yii\base\ActionFilter->beforeFilter()
+#3 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Component.php(627): call_user_func()
+#4 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(299): yii\base\Component->trigger()
+#5 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Controller.php(200): yii\base\Controller->beforeAction()
+#6 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(178): yii\web\Controller->beforeAction()
+#7 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#8 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#9 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#10 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#11 {main}
+2020-09-18 11:35:18 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58786'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '51efd983-76a1-4444-8b5b-82d6c715fcd6'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------836210982256866745858947'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------836210982256866745858947'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600428918.2011
+    'REQUEST_TIME' => 1600428918
+]
+2020-09-18 11:35:40 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/auth/AuthMethod.php:93
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction()
+#2 [internal function]: yii\base\ActionFilter->beforeFilter()
+#3 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Component.php(627): call_user_func()
+#4 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(299): yii\base\Component->trigger()
+#5 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Controller.php(200): yii\base\Controller->beforeAction()
+#6 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(178): yii\web\Controller->beforeAction()
+#7 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#8 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#9 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#10 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#11 {main}
+2020-09-18 11:35:40 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58792'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '69f92bd2-1b35-45df-87af-d74c0db4f510'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------885430894854251688846039'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------885430894854251688846039'
+    'HTTP_COOKIE' => '_csrf=q2i8Sw1X-qC35JOJOLcfN0_cra0ujcf8'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600428940.9211
+    'REQUEST_TIME' => 1600428940
+]
+2020-09-18 11:43:07 [127.0.0.1][-][-][error][Error] Error: Class 'rest\versions\v1\controllers\AccessControl' not found in /home/joy/Desktop/yii-advanced/rest/versions/v1/controllers/PostController.php:20
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Component.php(733): rest\versions\v1\controllers\PostController->behaviors()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Component.php(603): yii\base\Component->ensureBehaviors()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(299): yii\base\Component->trigger()
+#3 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Controller.php(200): yii\base\Controller->beforeAction()
+#4 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(178): yii\web\Controller->beforeAction()
+#5 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#6 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#8 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#9 {main}
+2020-09-18 11:43:07 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'ieOO62v9aIUB8qlTgBNELXRVW5wimhpI'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58950'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '744a87cc-39dd-4d6d-bffe-489421a321fc'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------992357007685535470893936'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------992357007685535470893936'
+    'HTTP_COOKIE' => '_csrf=ieOO62v9aIUB8qlTgBNELXRVW5wimhpI'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600429387.4138
+    'REQUEST_TIME' => 1600429387
+]
+2020-09-18 11:43:50 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/auth/AuthMethod.php:93
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction()
+#2 [internal function]: yii\base\ActionFilter->beforeFilter()
+#3 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Component.php(627): call_user_func()
+#4 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(299): yii\base\Component->trigger()
+#5 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Controller.php(200): yii\base\Controller->beforeAction()
+#6 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(178): yii\web\Controller->beforeAction()
+#7 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#8 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#9 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#10 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#11 {main}
+2020-09-18 11:43:50 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'ieOO62v9aIUB8qlTgBNELXRVW5wimhpI'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58974'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'a77fc471-a9bd-4085-a877-189226cfcb2e'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------831798329800801781192454'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------831798329800801781192454'
+    'HTTP_COOKIE' => '_csrf=ieOO62v9aIUB8qlTgBNELXRVW5wimhpI'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600429430.6899
+    'REQUEST_TIME' => 1600429430
+]
+2020-09-18 11:44:05 [127.0.0.1][1][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to perform this action. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/AccessControl.php:158
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\AccessControl->beforeAction()
+#2 [internal function]: yii\base\ActionFilter->beforeFilter()
+#3 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Component.php(627): call_user_func()
+#4 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(299): yii\base\Component->trigger()
+#5 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Controller.php(200): yii\base\Controller->beforeAction()
+#6 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(178): yii\web\Controller->beforeAction()
+#7 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#8 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#9 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#10 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#11 {main}
+2020-09-18 11:44:05 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'ieOO62v9aIUB8qlTgBNELXRVW5wimhpI'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58984'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'f34e71cd-3747-428f-a37b-f988a3725b10'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------404333304842607169612647'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------404333304842607169612647'
+    'HTTP_COOKIE' => '_csrf=ieOO62v9aIUB8qlTgBNELXRVW5wimhpI'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600429445.1746
+    'REQUEST_TIME' => 1600429445
+]
+2020-09-18 11:44:19 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/auth/AuthMethod.php:93
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction()
+#2 [internal function]: yii\base\ActionFilter->beforeFilter()
+#3 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Component.php(627): call_user_func()
+#4 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(299): yii\base\Component->trigger()
+#5 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Controller.php(200): yii\base\Controller->beforeAction()
+#6 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(178): yii\web\Controller->beforeAction()
+#7 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#8 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#9 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#10 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#11 {main}
+2020-09-18 11:44:19 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'QZtQtN4DaDmFqdA3W2plKi1ahNEIAg4F'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58988'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'ed426d35-33e5-4475-927c-d351c8523341'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------560474314906990584371089'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------560474314906990584371089'
+    'HTTP_COOKIE' => '_csrf=QZtQtN4DaDmFqdA3W2plKi1ahNEIAg4F'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600429459.9842
+    'REQUEST_TIME' => 1600429459
+]
+2020-09-18 11:46:08 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/auth/AuthMethod.php:93
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction()
+#2 [internal function]: yii\base\ActionFilter->beforeFilter()
+#3 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Component.php(627): call_user_func()
+#4 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(299): yii\base\Component->trigger()
+#5 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Controller.php(200): yii\base\Controller->beforeAction()
+#6 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(178): yii\web\Controller->beforeAction()
+#7 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#8 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#9 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#10 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#11 {main}
+2020-09-18 11:46:08 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'QZtQtN4DaDmFqdA3W2plKi1ahNEIAg4F'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59052'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'bdbfc138-aa65-4ba1-93f0-99be503cf01b'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------516358390704322152166344'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------516358390704322152166344'
+    'HTTP_COOKIE' => '_csrf=QZtQtN4DaDmFqdA3W2plKi1ahNEIAg4F'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600429568.9721
+    'REQUEST_TIME' => 1600429568
+]
+2020-09-18 11:46:46 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/auth/AuthMethod.php:93
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction()
+#2 [internal function]: yii\base\ActionFilter->beforeFilter()
+#3 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Component.php(627): call_user_func()
+#4 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(299): yii\base\Component->trigger()
+#5 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Controller.php(200): yii\base\Controller->beforeAction()
+#6 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(178): yii\web\Controller->beforeAction()
+#7 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#8 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#9 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#10 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#11 {main}
+2020-09-18 11:46:46 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'DnsLAccR86hMix0MnFv8qlF6kDS_N9xF'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59068'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts/1'
+    'REQUEST_METHOD' => 'DELETE'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts/1'
+    'PHP_SELF' => '/index.php/v1/posts/1'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '923371d0-a931-414c-bee4-782f83b4435d'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------593846286435870869247219'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------593846286435870869247219'
+    'HTTP_COOKIE' => '_csrf=DnsLAccR86hMix0MnFv8qlF6kDS_N9xF'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600429606.3056
+    'REQUEST_TIME' => 1600429606
+]
+2020-09-18 11:47:21 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/auth/AuthMethod.php:93
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction()
+#2 [internal function]: yii\base\ActionFilter->beforeFilter()
+#3 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Component.php(627): call_user_func()
+#4 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(299): yii\base\Component->trigger()
+#5 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Controller.php(200): yii\base\Controller->beforeAction()
+#6 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(178): yii\web\Controller->beforeAction()
+#7 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#8 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#9 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#10 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#11 {main}
+2020-09-18 11:47:21 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'title' => 'dev'
+    'content_' => 'test content'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'kQ98naqO4d0CxFdutZsMLkSBAe0lu8wJ'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59084'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts'
+    'PHP_SELF' => '/index.php/v1/posts'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'fc286017-3190-405a-ae9c-6b41777f0364'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------992260973902802138769448'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------992260973902802138769448'
+    'HTTP_COOKIE' => '_csrf=kQ98naqO4d0CxFdutZsMLkSBAe0lu8wJ'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600429641.3507
+    'REQUEST_TIME' => 1600429641
+]
+2020-09-18 12:18:34 [127.0.0.1][1][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Object not found: 1 in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/rest/Action.php:104
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/rest/UpdateAction.php(40): yii\rest\Action->findModel()
+#1 [internal function]: yii\rest\UpdateAction->run()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array()
+#3 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\Action->runWithParams()
+#4 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#5 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#6 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#7 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#8 {main}
+2020-09-18 12:18:33 [127.0.0.1][1][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '_47GxFfQWzf5uOkTC3WaAqITOknsEnLt'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59316'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts/1'
+    'REQUEST_METHOD' => 'PUT'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts/1'
+    'PHP_SELF' => '/index.php/v1/posts/1'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '0991ff7f-e267-483a-818c-de73fffb561a'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------067167011444265578289367'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------067167011444265578289367'
+    'HTTP_COOKIE' => '_csrf=_47GxFfQWzf5uOkTC3WaAqITOknsEnLt'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600431513.9379
+    'REQUEST_TIME' => 1600431513
+]
+2020-09-18 12:18:52 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/1 in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 12:18:52 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'McqS_UudfvUZvxOPOGdFhhoMhOhm-7SN'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59320'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post/1'
+    'REQUEST_METHOD' => 'PUT'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post/1'
+    'PHP_SELF' => '/index.php/v1/post/1'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '33938cae-1010-4fa6-8b1e-4d5d6706378e'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------097412994068293993625995'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------097412994068293993625995'
+    'HTTP_COOKIE' => '_csrf=McqS_UudfvUZvxOPOGdFhhoMhOhm-7SN'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600431532.0158
+    'REQUEST_TIME' => 1600431532
+]
+2020-09-18 12:19:01 [127.0.0.1][1][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Object not found: 1 in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/rest/Action.php:104
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/rest/UpdateAction.php(40): yii\rest\Action->findModel()
+#1 [internal function]: yii\rest\UpdateAction->run()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array()
+#3 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\Action->runWithParams()
+#4 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#5 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#6 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#7 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#8 {main}
+2020-09-18 12:19:01 [127.0.0.1][1][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'McqS_UudfvUZvxOPOGdFhhoMhOhm-7SN'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59324'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts/1'
+    'REQUEST_METHOD' => 'PUT'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts/1'
+    'PHP_SELF' => '/index.php/v1/posts/1'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '2d4265b3-07ee-4924-82d3-f1ae681b0c39'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------611463631050128149084858'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------611463631050128149084858'
+    'HTTP_COOKIE' => '_csrf=McqS_UudfvUZvxOPOGdFhhoMhOhm-7SN'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600431541.7084
+    'REQUEST_TIME' => 1600431541
+]
+2020-09-18 12:19:08 [127.0.0.1][1][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Object not found: 1 in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/rest/Action.php:104
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/rest/ViewAction.php(29): yii\rest\Action->findModel()
+#1 [internal function]: yii\rest\ViewAction->run()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array()
+#3 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\Action->runWithParams()
+#4 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#5 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#6 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#7 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#8 {main}
+2020-09-18 12:19:08 [127.0.0.1][1][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'm3WOkAzZ6m-OmSdWFRic07HgZt5qOxNo'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59328'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts/1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts/1'
+    'PHP_SELF' => '/index.php/v1/posts/1'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '16a4b0b7-00b7-4ff3-b0f6-03fcda9f169f'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------741262949228773720327029'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------741262949228773720327029'
+    'HTTP_COOKIE' => '_csrf=m3WOkAzZ6m-OmSdWFRic07HgZt5qOxNo'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600431548.7521
+    'REQUEST_TIME' => 1600431548
+]
+2020-09-18 12:19:29 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/1 in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 12:19:29 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '3LJzZLjoMjMrOKe_2itiRxJih3qRoVU1'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59338'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post/1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post/1'
+    'PHP_SELF' => '/index.php/v1/post/1'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '084ddf7c-924e-490b-bf3d-9bd1e02f0039'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------346823511287402260431328'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------346823511287402260431328'
+    'HTTP_COOKIE' => '_csrf=3LJzZLjoMjMrOKe_2itiRxJih3qRoVU1'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600431569.1478
+    'REQUEST_TIME' => 1600431569
+]
+2020-09-18 12:21:44 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/1 in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 12:21:44 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '3LJzZLjoMjMrOKe_2itiRxJih3qRoVU1'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59450'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post/1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post/1'
+    'PHP_SELF' => '/index.php/v1/post/1'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '6bfa1227-9c89-45ce-a30f-75247768372e'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------097164848782277929117955'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------097164848782277929117955'
+    'HTTP_COOKIE' => '_csrf=3LJzZLjoMjMrOKe_2itiRxJih3qRoVU1'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600431704.5713
+    'REQUEST_TIME' => 1600431704
+]
+2020-09-18 12:21:45 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/1 in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 12:21:45 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '3LJzZLjoMjMrOKe_2itiRxJih3qRoVU1'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59454'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post/1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post/1'
+    'PHP_SELF' => '/index.php/v1/post/1'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'd2167276-bd6e-4372-a342-ca08be4eb25f'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------733608985968914775296942'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------733608985968914775296942'
+    'HTTP_COOKIE' => '_csrf=3LJzZLjoMjMrOKe_2itiRxJih3qRoVU1'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600431705.6416
+    'REQUEST_TIME' => 1600431705
+]
+2020-09-18 12:21:46 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/1 in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 12:21:46 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '3LJzZLjoMjMrOKe_2itiRxJih3qRoVU1'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59458'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post/1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post/1'
+    'PHP_SELF' => '/index.php/v1/post/1'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'a3f93191-4281-4d6d-a759-d580ed3eb618'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------046798013328374825370168'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------046798013328374825370168'
+    'HTTP_COOKIE' => '_csrf=3LJzZLjoMjMrOKe_2itiRxJih3qRoVU1'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600431706.5261
+    'REQUEST_TIME' => 1600431706
+]
+2020-09-18 12:21:47 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/1 in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 12:21:47 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '3LJzZLjoMjMrOKe_2itiRxJih3qRoVU1'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59462'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post/1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post/1'
+    'PHP_SELF' => '/index.php/v1/post/1'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => 'c4fe1d9c-b804-435f-ae32-ef88365b3fcf'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------583333549739148439195376'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------583333549739148439195376'
+    'HTTP_COOKIE' => '_csrf=3LJzZLjoMjMrOKe_2itiRxJih3qRoVU1'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600431707.3286
+    'REQUEST_TIME' => 1600431707
+]
+2020-09-18 12:21:54 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "v1/posts/1". in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#2 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-18 12:21:54 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '3LJzZLjoMjMrOKe_2itiRxJih3qRoVU1'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59468'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts/1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts/1'
+    'PHP_SELF' => '/index.php/v1/posts/1'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '42542075-5661-42f7-9d4b-630431842007'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------204619616721562423274310'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------204619616721562423274310'
+    'HTTP_COOKIE' => '_csrf=3LJzZLjoMjMrOKe_2itiRxJih3qRoVU1'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600431714.0642
+    'REQUEST_TIME' => 1600431714
+]
+2020-09-18 12:22:49 [127.0.0.1][1][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Object not found: 1 in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/rest/Action.php:104
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/rest/ViewAction.php(29): yii\rest\Action->findModel()
+#1 [internal function]: yii\rest\ViewAction->run()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array()
+#3 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\Action->runWithParams()
+#4 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#5 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#6 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#7 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#8 {main}
+2020-09-18 12:22:49 [127.0.0.1][1][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '3LJzZLjoMjMrOKe_2itiRxJih3qRoVU1'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59476'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts/1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts/1'
+    'PHP_SELF' => '/index.php/v1/posts/1'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '26c4496f-7a5f-46a2-87f1-6ca54dcdb306'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------990236339018653203793186'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------990236339018653203793186'
+    'HTTP_COOKIE' => '_csrf=3LJzZLjoMjMrOKe_2itiRxJih3qRoVU1'
+    'CONTENT_LENGTH' => '282'
+    'HTTP_CONTENT_LENGTH' => '282'
+    'REQUEST_TIME_FLOAT' => 1600431769.272
+    'REQUEST_TIME' => 1600431769
+]
+2020-09-18 12:27:48 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/auth/AuthMethod.php:93
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction()
+#2 [internal function]: yii\base\ActionFilter->beforeFilter()
+#3 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Component.php(627): call_user_func()
+#4 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(299): yii\base\Component->trigger()
+#5 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Controller.php(200): yii\base\Controller->beforeAction()
+#6 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(178): yii\web\Controller->beforeAction()
+#7 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#8 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#9 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#10 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#11 {main}
+2020-09-18 12:27:48 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '3'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'mAKCikwfXbZTW48NxgmTGLTwkI-Uleqo'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59540'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts/3'
+    'REQUEST_METHOD' => 'DELETE'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts/3'
+    'PHP_SELF' => '/index.php/v1/posts/3'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '5842f444-2515-4964-b790-27197bb6d2db'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=mAKCikwfXbZTW48NxgmTGLTwkI-Uleqo'
+    'REQUEST_TIME_FLOAT' => 1600432068.026
+    'REQUEST_TIME' => 1600432068
+]
+2020-09-18 12:42:53 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/auth/AuthMethod.php:93
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\auth\AuthMethod->beforeAction()
+#2 [internal function]: yii\base\ActionFilter->beforeFilter()
+#3 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Component.php(627): call_user_func()
+#4 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(299): yii\base\Component->trigger()
+#5 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Controller.php(200): yii\base\Controller->beforeAction()
+#6 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php(178): yii\web\Controller->beforeAction()
+#7 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#8 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#9 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#10 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#11 {main}
+2020-09-18 12:42:53 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '1Q9Y96gjn1Xe_qLV1zhJHRs001S2NnoQ'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59720'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/posts/2'
+    'REQUEST_METHOD' => 'PUT'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/posts/2'
+    'PHP_SELF' => '/index.php/v1/posts/2'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '52275fbb-34b1-45a7-8e8f-ab732512c909'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------250252407212556740119655'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------250252407212556740119655'
+    'HTTP_COOKIE' => '_csrf=1Q9Y96gjn1Xe_qLV1zhJHRs001S2NnoQ'
+    'CONTENT_LENGTH' => '280'
+    'HTTP_CONTENT_LENGTH' => '280'
+    'REQUEST_TIME_FLOAT' => 1600432973.9264
+    'REQUEST_TIME' => 1600432973
+]
+2020-09-19 04:47:23 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/post/4 in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#1 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#3 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/joy/Desktop/yii-advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /home/joy/Desktop/yii-advanced/rest/web/index.php(23): yii\base\Application->run()
+#2 {main}
+2020-09-19 04:47:23 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'yUeRGPUyc-A-MSYdN1ZMbDivg6fzxR55'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/joy/Desktop/yii-advanced/rest/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58720'
+    'SERVER_SOFTWARE' => 'PHP 7.4.3 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/v1/post/4'
+    'REQUEST_METHOD' => 'PUT'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/joy/Desktop/yii-advanced/rest/web/index.php'
+    'PATH_INFO' => '/v1/post/4'
+    'PHP_SELF' => '/index.php/v1/post/4'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.26.5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_POSTMAN_TOKEN' => '53a650a4-e773-409d-a463-9b98f954360b'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------383532102747837855084510'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=--------------------------383532102747837855084510'
+    'HTTP_COOKIE' => '_csrf=yUeRGPUyc-A-MSYdN1ZMbDivg6fzxR55'
+    'CONTENT_LENGTH' => '280'
+    'HTTP_CONTENT_LENGTH' => '280'
+    'REQUEST_TIME_FLOAT' => 1600490843.7706
+    'REQUEST_TIME' => 1600490843
+]
